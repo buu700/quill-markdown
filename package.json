@@ -1,0 +1,26 @@
+{
+	"name": "quill-markdown",
+	"description": "Converts between Quill deltas and Markdown",
+	"version": "1.0.0",
+	"main": "./dist/quill-markdown.js",
+	"typings": "./dist/quill-markdown.d.ts",
+	"license": "BSD",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/buu700/quill-markdown.git"
+	},
+	"dependencies": {
+		"@types/markdown-it": "*",
+		"@types/quill": "*",
+		"@types/to-markdown": "*",
+		"markdown-it": "*",
+		"node-quill-converter": "https://github.com/buu700/node-quill-converter",
+		"to-markdown": "*"
+	},
+	"devDependencies": {
+		"typescript": "^3.3"
+	},
+	"scripts": {
+		"build": "rm -rf dist 2> /dev/null ; tsc ; chmod -R 777 dist ; git add dist"
+	}
+}
