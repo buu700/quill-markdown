@@ -1,7 +1,10 @@
 import * as Quill from 'quill';
-/** Converts a Markdown string into a Quill delta. */
-export declare const markdownToQuill: (markdown: string) => any;
-/** Converts a Quill delta into a Markdown string. */
-export declare const quillToMarkdown: (delta: {
+/** Quill delta. */
+export interface IQuillDelta {
+    /** @see Quill.DeltaOperation */
     ops: Quill.DeltaOperation[];
-}) => string;
+}
+/** Converts a Markdown string into a Quill delta. */
+export declare const markdownToQuill: (markdown: string) => IQuillDelta;
+/** Converts a Quill delta into a Markdown string. */
+export declare const quillToMarkdown: (delta: IQuillDelta) => string;

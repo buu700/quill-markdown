@@ -1,7 +1,7 @@
 {
 	"name": "quill-markdown",
 	"description": "Converts between Quill deltas and Markdown",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "./dist/quill-markdown.js",
 	"typings": "./dist/quill-markdown.d.ts",
 	"license": "BSD",
