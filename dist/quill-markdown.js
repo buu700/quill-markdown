@@ -3,11 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.quillToMarkdown = exports.markdownToQuill = exports.markdownToHTML = exports.htmlToMarkdown = void 0;
 var MarkdownIt = require("markdown-it");
 var node_quill_converter_1 = require("node-quill-converter");
-var toMarkdown = require("to-markdown");
+var TurndownService = require("turndown");
 var markdownIt = MarkdownIt();
+var turndownService = new TurndownService();
 /** Converts an HTML string into a Markdown string. */
 var htmlToMarkdown = function (html) {
-    return toMarkdown(html);
+    return turndownService.turndown(html);
 };
 exports.htmlToMarkdown = htmlToMarkdown;
 /** Converts a Markdown string into a Quill delta. */
