@@ -18,12 +18,12 @@ var markdownToHTML = function (markdown) {
 exports.markdownToHTML = markdownToHTML;
 /** Converts a Markdown string into a Quill delta. */
 var markdownToQuill = function (markdown) {
-    return node_quill_converter_1.convertHtmlToDelta(exports.markdownToHTML(markdown));
+    return (0, node_quill_converter_1.convertHtmlToDelta)((0, exports.markdownToHTML)(markdown));
 };
 exports.markdownToQuill = markdownToQuill;
 /** Converts a Quill delta into a Markdown string. */
 var quillToMarkdown = function (delta) {
-    return exports.htmlToMarkdown(node_quill_converter_1.convertDeltaToHtml(delta));
+    return (0, exports.htmlToMarkdown)((0, node_quill_converter_1.convertDeltaToHtml)(delta));
 };
 exports.quillToMarkdown = quillToMarkdown;
 //# sourceMappingURL=quill-markdown.js.map
