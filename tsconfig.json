@@ -12,6 +12,6 @@
 	},
 	"files": [
 		"./modules.d.ts",
-		"./quill-markdown.ts"
+		"./index.ts"
 	]
 }

@@ -26,4 +26,4 @@ var quillToMarkdown = function (delta) {
     return (0, exports.htmlToMarkdown)((0, node_quill_converter_1.convertDeltaToHtml)(delta));
 };
 exports.quillToMarkdown = quillToMarkdown;
-//# sourceMappingURL=quill-markdown.js.map
+//# sourceMappingURL=index.js.map
