@@ -1,8 +1,8 @@
-import * as Quill from 'quill';
+import type * as Quill from 'quill';
 /** Quill delta. */
 export interface IQuillDelta {
-    /** @see Quill.DeltaOperation */
-    ops: Quill.DeltaOperation[];
+    /** @see Quill.Op */
+    ops: Quill.Op[];
 }
 /** Converts an HTML string into a Markdown string. */
 export declare const htmlToMarkdown: (html: string) => string;
