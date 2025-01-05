@@ -1,17 +1,9 @@
 import * as MarkdownIt from 'markdown-it';
-import {convertDeltaToHtml, convertHtmlToDelta} from 'node-quill-converter';
-import type * as Quill from 'quill';
+import {convertDeltaToHtml, convertHtmlToDelta, IQuillDelta} from 'quill-converter';
 import * as TurndownService from 'turndown';
-
 
 const markdownIt = MarkdownIt();
 const turndownService = new TurndownService();
-
-/** Quill delta. */
-export interface IQuillDelta {
-	/** @see Quill.Op */
-	ops: Quill.Op[];
-}
 
 /** Converts an HTML string into a Markdown string. */
 export const htmlToMarkdown = (html: string) : string =>
@@ -32,3 +24,5 @@ export const markdownToQuill = (markdown: string) : IQuillDelta =>
 export const quillToMarkdown = (delta: IQuillDelta) : string =>
 	htmlToMarkdown(convertDeltaToHtml(delta))
 ;
+
+export {IQuillDelta} from 'quill-converter';

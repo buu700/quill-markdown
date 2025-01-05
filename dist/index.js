@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.quillToMarkdown = exports.markdownToQuill = exports.markdownToHTML = exports.htmlToMarkdown = void 0;
 var MarkdownIt = require("markdown-it");
-var node_quill_converter_1 = require("node-quill-converter");
+var quill_converter_1 = require("quill-converter");
 var TurndownService = require("turndown");
 var markdownIt = MarkdownIt();
 var turndownService = new TurndownService();
@@ -18,12 +18,12 @@ var markdownToHTML = function (markdown) {
 exports.markdownToHTML = markdownToHTML;
 /** Converts a Markdown string into a Quill delta. */
 var markdownToQuill = function (markdown) {
-    return (0, node_quill_converter_1.convertHtmlToDelta)((0, exports.markdownToHTML)(markdown));
+    return (0, quill_converter_1.convertHtmlToDelta)((0, exports.markdownToHTML)(markdown));
 };
 exports.markdownToQuill = markdownToQuill;
 /** Converts a Quill delta into a Markdown string. */
 var quillToMarkdown = function (delta) {
-    return (0, exports.htmlToMarkdown)((0, node_quill_converter_1.convertDeltaToHtml)(delta));
+    return (0, exports.htmlToMarkdown)((0, quill_converter_1.convertDeltaToHtml)(delta));
 };
 exports.quillToMarkdown = quillToMarkdown;
 //# sourceMappingURL=index.js.map

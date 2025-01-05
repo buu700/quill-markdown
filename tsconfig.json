@@ -10,8 +10,5 @@
 		"skipLibCheck": true,
 		"strict": true
 	},
-	"files": [
-		"./modules.d.ts",
-		"./index.ts"
-	]
+	"files": ["./index.ts"]
 }
