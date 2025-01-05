@@ -4,6 +4,10 @@ exports.quillToMarkdown = exports.markdownToQuill = exports.markdownToHTML = exp
 var MarkdownIt = require("markdown-it");
 var quill_converter_1 = require("quill-converter");
 var TurndownService = require("turndown");
+/* Node + web compatibility workaround */
+if (TurndownService.default) {
+    TurndownService = TurndownService.default;
+}
 var markdownIt = MarkdownIt();
 var turndownService = new TurndownService();
 /** Converts an HTML string into a Markdown string. */

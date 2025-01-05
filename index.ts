@@ -3,6 +3,11 @@ import type {Delta, Op} from 'quill';
 import {convertDeltaToHtml, convertHtmlToDelta, IQuillDelta} from 'quill-converter';
 import * as TurndownService from 'turndown';
 
+/* Node + web compatibility workaround */
+if ((<any> TurndownService).default) {
+	(<any> TurndownService) = (<any> TurndownService).default;
+}
+
 const markdownIt = MarkdownIt();
 const turndownService = new TurndownService();
 

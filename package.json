@@ -1,7 +1,7 @@
 {
 	"name": "quill-markdown",
 	"description": "Converts between Quill deltas and Markdown",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"main": "./dist/index.js",
 	"typings": "./dist/index.d.ts",
 	"license": "BSD",
@@ -13,7 +13,7 @@
 		"@types/markdown-it": "^14.1.2",
 		"@types/turndown": "^5.0.5",
 		"markdown-it": "^14.1.0",
-		"quill-converter": "^1.0.1",
+		"quill-converter": "^1.0.2",
 		"turndown": "^7.2.0"
 	},
 	"devDependencies": {
